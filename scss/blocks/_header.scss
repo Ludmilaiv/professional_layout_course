@@ -1,0 +1,53 @@
+.header {
+  background-color: $black;
+
+  &__wrp {
+    display: flex;
+    justify-content: space-between;
+    min-height: 75px;
+    align-items: center;
+  }
+
+  &__logo {
+    margin: 0 41px 0 0;
+  }
+
+  &__button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+
+  &__link {
+    margin: 0 0 0 33px;
+  }
+
+  &__link-cart {
+    position: relative;
+
+    &::after {
+      content: '5';
+      background-color: $pink-text;
+      color: $white;
+      width: 19px;
+      height: 19px;
+      position: absolute;
+      right: -11px;
+      top: -21px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  &__search {
+    cursor: pointer;
+  }
+
+  &__menu {
+    display: none;
+  }
+}

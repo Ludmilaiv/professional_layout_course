@@ -1,0 +1,38 @@
+.offer {
+  display: flex;
+  align-items: center;
+  background-color: $black;
+  min-height: 341px;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item-img {
+    margin: 0 0 28px;
+  }
+
+  &__item-title {
+    color: $light-gray-text;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 0 16px;
+    text-align: center;
+  }
+
+  &__item-desc {
+    color: $light-gray-text;
+    font-weight: 300;
+    font-size: 13.972px;
+    text-align: center;
+  }
+}
