@@ -6,14 +6,14 @@
   --black-text: #000000;
   --pink-text: #F1808F;
   --white: #FFFFFF;
-  --light-gray-text: #FBFBFB;
+  --light-grey-text: #FBFBFB;
   --grey-text: #9F9F9F;
   --red-text: #F16D7F;
   --red-hover: #E05C6E;
   --pink-bdr: #FF6A6A;
   --grey-filter: rgba(58, 56, 56, 0.86);
   --grey-input: #E1E1E1;
-  --gray-input-text: #222224;
+  --grey-input-text: #222224;
   --grey-placeholder: #222224a1;
   --grey-reg-input: #A4A4A4;
 }
@@ -319,7 +319,7 @@ body {
 }
 
 .offer__item-title {
-  color: var(--light-gray-text);
+  color: var(--light-grey-text);
   font-size: 20px;
   line-height: 24px;
   margin: 0 0 16px;
@@ -327,7 +327,7 @@ body {
 }
 
 .offer__item-desc {
-  color: var(--light-gray-text);
+  color: var(--light-grey-text);
   font-weight: 300;
   font-size: 13.972px;
   text-align: center;
@@ -403,7 +403,7 @@ body {
 .copyright__desc {
   font-size: 16px;
   line-height: 19px;
-  color: var(--light-gray-text);
+  color: var(--light-grey-text);
 }
 
 .copyright__socials {
@@ -608,29 +608,3 @@ body {
   background-image: url("../img/check.svg");
   background-size: cover;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
