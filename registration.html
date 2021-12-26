@@ -79,12 +79,13 @@
           <input class="registration__form-input" id="name" type="text" placeholder="First Name">
           <label class="registration__form-label visually-hidden" for="last-name">Your Name</label>
           <input class="registration__form-input" id="last-name" type="text" placeholder="Last Name">
-          <div class="registration__form-radio-wrp">
+          <fieldset class="registration__form-radio-wrp">
+            <legend class="visually-hidden">gender</legend>
             <input class="registration__form-radio" type="radio" id="male" value="male" name="gender" checked>
             <label class="registration__form-radio-label" for="male">Male</label>
             <input class="registration__form-radio" type="radio" id="female" value="female" name="gender">
             <label class="registration__form-radio-label" for="female">Female</label>
-          </div>
+          </fieldset>
           <label class="registration__form-label" for="email">Login details</label>
           <input class="registration__form-input" id="email" type="email" placeholder="Email">
           <label class="registration__form-label visually-hidden" for="password">Login details</label>
