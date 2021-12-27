@@ -120,19 +120,20 @@
     color: $red-text;
     font-size: 16px;
     line-height: 19px;
-  }
 
-  &__button:hover {
-    background-color: $pink-bdr;
-    color: $white;
-    cursor: pointer;
-  }
+    &:hover {
+      background-color: $pink-bdr;
+      color: $white;
+      cursor: pointer;
+    }
 
-  &__button:focus {
-    outline: $black 1px solid;
-  }
+    &:focus {
+      border: none;
+      outline: $black 1px solid;
+    }
 
-  &__button:active{
-    background-color: $red-hover;
+    &:active{
+      background-color: $red-hover;
+    }
   }
 }

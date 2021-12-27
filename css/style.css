@@ -422,6 +422,15 @@ body {
   cursor: pointer;
 }
 
+.products__button:focus {
+  border: none;
+  outline: #222222 1px solid;
+}
+
+.products__button:active {
+  background-color: #E05C6E;
+}
+
 .sales__item {
   width: 360px;
   min-height: 260px;
