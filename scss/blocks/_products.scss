@@ -33,6 +33,21 @@
     &:hover {
       &>.products__item-button {
         display: flex;
+
+        &:hover {
+          background-color: $black;
+          opacity: 0.8;
+        }
+
+        &:active {
+          background-color: $black;
+          opacity: 1;
+        }
+
+        &:focus {
+          background-color: $black;
+          opacity: 0.6;
+        }
       }
 
       &::after {
@@ -111,5 +126,13 @@
     background-color: $pink-bdr;
     color: $white;
     cursor: pointer;
+  }
+
+  &__button:focus {
+    outline: $black 1px solid;
+  }
+
+  &__button:active{
+    background-color: $red-hover;
   }
 }

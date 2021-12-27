@@ -36,6 +36,19 @@
         fill: $white;
       }
     }
+
+    &:active {
+      background-color: $red-text;
+    }
+
+    &:focus {
+      background-color: $white;
+      outline: none;
+      
+      &>.copyright__socials-item-img {
+        fill: $red-text;
+      }
+    }
   }
 
   &__socials-item-img {

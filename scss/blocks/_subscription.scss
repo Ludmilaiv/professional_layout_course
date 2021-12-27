@@ -59,11 +59,11 @@
 
   &__form-input {
     flex-grow: 1;
-    padding: 17px 26px;
+    padding: 16px 25px;
     background-color: $grey-input;
     line-height: 14px;
     color: $grey-input-text;
-    border: none;
+    border: 1px $grey-input solid;
     border-radius: 20px 0 0 20px;
   }
 
@@ -73,6 +73,11 @@
 
   &__form-input:focus {
     outline: none;
+    border: 1px $grey-placeholder solid;
+  }
+
+  &__form-input:hover {
+    border: 1px $red-text solid;
   }
 
   &__form-submit {
@@ -81,10 +86,23 @@
     border: none;
     border-radius: 0 20px 20px 0;
     color: $white;
-  }
 
-  &__form-submit:hover {
-    background-color: $red-hover;
-    cursor: pointer;
+    &:hover {
+      background-color: $red-hover;
+      cursor: pointer;
+    }
+
+    &:focus {
+      background-color: $red-text;
+      border: 1px $red-hover solid;
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: $red-text;
+      border: 1px $red-hover solid;
+      cursor: pointer;
+    }
+
   }
 }
