@@ -5,13 +5,24 @@
   background-size: cover;
   min-height: 448px;
 
+  @include tablet {
+    min-height: 614px;
+    align-items: flex-start;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__wrp {
     width: 360px;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,6 +32,10 @@
   &__photo {
     width: 96px;
     margin: 0 0 30px;
+
+    @include tablet {
+      margin: 53px 0 30px 0;
+    }
   }
 
   &__photo-desc {
@@ -28,6 +43,10 @@
     line-height: 24px;
     text-align: center;
     color: $black;
+
+    @include mobile {
+      @include font(18px, 22px);
+    }
   }
 
   &__photo-desc-italic {
@@ -41,6 +60,10 @@
     text-align: center;
     text-transform: uppercase;
     color: $black;
+
+    @include tablet {
+      margin: 48px 0 0 0;
+    }
   }
 
   &__sub-title {
@@ -51,9 +74,14 @@
     color: $black;
   }
 
+  &__form {
+    max-width: 100%;
+  }
+
   &__form-wrp {
     display: flex;
     width: 356px;
+    max-width: 100%;
     margin: 32px 0 0 0;
   }
 
@@ -65,6 +93,11 @@
     color: $grey-input-text;
     border: 1px $grey-input solid;
     border-radius: 20px 0 0 20px;
+
+    @include mobile {
+      width: 50%;
+      padding: 10px 21px;
+    }
   }
 
   &__form-input::placeholder {
@@ -86,6 +119,10 @@
     border: none;
     border-radius: 0 20px 20px 0;
     color: $white;
+
+    @include mobile {
+      min-width: 95px;
+    }
 
     &:hover {
       background-color: $red-hover;

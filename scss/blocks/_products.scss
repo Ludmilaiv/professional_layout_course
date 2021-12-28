@@ -25,6 +25,18 @@
     width: 360px;
     min-height: 420px;
     margin: 0 0 30px;
+
+    @include tablet {
+      width: 48%;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__item-img {
+    width: 100%;
   }
 
   &__item-img-wrp {
