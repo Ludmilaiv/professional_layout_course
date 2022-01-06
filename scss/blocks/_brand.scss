@@ -14,6 +14,8 @@
     @include font(48px, 58px, 900);
     color: $black;
     text-transform: uppercase;
+    border-left: 12px $pink-text solid;
+    padding-left: 16px; 
   }
 
   &__sub-title {
@@ -24,5 +26,44 @@
 
   &__sub-title-pink {
     color: $pink-text;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .brand {
+    &__img {
+      width: 50%;
+      max-height: 368px;
+      object-fit: contain;
+    }
+  
+    &__title-wrp {
+      width: 50%;
+      min-height: 368px;
+    }
+  
+    &__title {
+      @include font(44px, 53px, 900);
+    }
+  
+    &__sub-title {
+      @include font(24px, 29px, 700);
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .brand {
+    &__img {
+      display: none;
+    }
+  
+    &__title {
+      @include font(38px, 46px, 900);
+    }
+  
+    &__sub-title {
+      @include font(20px, 24px, 700);
+    }
   }
 }

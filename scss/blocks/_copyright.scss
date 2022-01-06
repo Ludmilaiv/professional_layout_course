@@ -4,16 +4,29 @@
   display: flex;
   align-items: center;
 
+  @include mobile {
+    min-height: 143px;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include mobile {
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+    }
   }
 
   &__desc {
     font-size: 16px;
     line-height: 19px;
     color: $light-gray-text;
+
+    @include mobile {
+      margin: 40px 0 0 0;
+    }
   }
 
   &__socials {
