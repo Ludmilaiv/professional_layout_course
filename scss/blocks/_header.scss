@@ -1,0 +1,93 @@
+.header {
+  background-color: $black;
+
+  &__wrp {
+    display: flex;
+    justify-content: space-between;
+    min-height: 75px;
+    align-items: center;
+  }
+
+  &__logo {
+    margin: 0 41px 0 0;
+  }
+
+  &__logo-groop {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__button {
+    background-color: transparent;
+    padding: 7px 5px 5px 5px;
+    border-radius: 3px;
+    border: 0;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+
+    &:focus{
+      outline: 1px $grey-text solid;
+    }
+  }
+
+  &__nav-group {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    display: block;
+    margin: 0 0 0 33px;
+    padding: 7px 0px 5px;
+    border-radius: 3px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+
+    &:focus{
+      outline: 1px $grey-text solid;
+    }
+  }
+
+  &__link-cart {
+    position: relative;
+
+    &::after {
+      content: '5';
+      background-color: $pink-text;
+      color: $white;
+      width: 19px;
+      height: 19px;
+      position: absolute;
+      right: -11px;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  &__search {
+    margin-left: 0;
+    cursor: pointer;
+  }
+
+  &__menu {
+    display: none;
+  }
+}

@@ -1,0 +1,108 @@
+.subscription {
+  display: flex;
+  align-items: center;
+  background-image: url('../img/background-subscribe.jpg');
+  background-size: cover;
+  min-height: 448px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__wrp {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__photo {
+    width: 96px;
+    margin: 0 0 30px;
+  }
+
+  &__photo-desc {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: $black;
+  }
+
+  &__photo-desc-italic {
+    font-style: italic;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $black;
+  }
+
+  &__sub-title {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $black;
+  }
+
+  &__form-wrp {
+    display: flex;
+    width: 356px;
+    margin: 32px 0 0 0;
+  }
+
+  &__form-input {
+    flex-grow: 1;
+    padding: 16px 25px;
+    background-color: $grey-input;
+    line-height: 14px;
+    color: $grey-input-text;
+    border: 1px $grey-input solid;
+    border-radius: 20px 0 0 20px;
+  }
+
+  &__form-input::placeholder {
+    color: $grey-placeholder;
+  }
+
+  &__form-input:focus {
+    outline: none;
+    border: 1px $grey-placeholder solid;
+  }
+
+  &__form-input:hover {
+    border: 1px $red-text solid;
+  }
+
+  &__form-submit {
+    min-width: 100px;
+    background-color: $red-text;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    color: $white;
+
+    &:hover {
+      background-color: $red-hover;
+      cursor: pointer;
+    }
+
+    &:focus {
+      background-color: $red-text;
+      border: 1px $red-hover solid;
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: $red-text;
+      border: 1px $red-hover solid;
+      cursor: pointer;
+    }
+
+  }
+}

@@ -1,0 +1,139 @@
+.products {
+
+  &__title {
+    margin: 96px 0 6px;
+    text-align: center;
+    line-height: 36px;
+    font-size: 30px;
+    color: $black;
+  }
+
+  &__desk {
+    margin: 0 0 48px;
+    text-align: center;
+    color: $grey-text;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    background-color: $light-pink-bkg;
+    width: 360px;
+    min-height: 420px;
+    margin: 0 0 30px;
+  }
+
+  &__item-img-wrp {
+    position: relative;
+
+    &:hover {
+      &>.products__item-button {
+        display: flex;
+
+        &:hover {
+          background-color: $black;
+          opacity: 0.8;
+        }
+
+        &:active {
+          background-color: $black;
+          opacity: 1;
+        }
+
+        &:focus {
+          background-color: $black;
+          opacity: 0.6;
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: $grey-filter;
+      }
+    }
+  }
+
+  &__item-wrp {
+    padding: 25px 16px 20px 16px;
+  }
+
+  &__item-title {
+    margin: 0 0 13px;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 16px;
+    color: $black-text;
+  }
+
+  &__item-desk {
+    margin: 0 0 18px;
+    font-weight: 300;
+    color: $grey-text;
+  }
+
+  &__item-priсe {
+    font-size: 16px;
+    line-height: 19px;
+    color: $red-text;
+  }
+
+  &__item-button {
+    position: absolute;
+    z-index: 2;
+    border: solid 2px $white;
+    padding: 13px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    width: 138px;
+    height: 43px;
+    left: 50%;
+    top: 50%;
+    margin: calc(-43px/2) 0 0 calc(-138px/2);
+    color: $white;
+    cursor: pointer;
+  }
+
+  &__item-button-img {
+    width: 26px;
+    height: 24px;
+    margin: 0 11px 0 0;
+  }
+
+  &__button {
+    display: block;
+    margin: 19px auto 100px;
+    padding: 14px 39px;
+    border: 1px solid $pink-bdr;
+    background-color: transparent;
+    color: $red-text;
+    font-size: 16px;
+    line-height: 19px;
+
+    &:hover {
+      background-color: $pink-bdr;
+      color: $white;
+      cursor: pointer;
+    }
+
+    &:focus {
+      border: none;
+      outline: $black 1px solid;
+    }
+
+    &:active{
+      background-color: $red-hover;
+    }
+  }
+}

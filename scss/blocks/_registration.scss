@@ -1,0 +1,142 @@
+.registration {
+
+  &__title-wrp {
+    display: flex;
+    align-items: center;
+    background-color: $pinc-bkg-light;
+    min-height: 148px;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: $red-text;
+  }
+
+  &__form-wrp {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 64px;
+    margin-bottom: 96px;
+  }
+
+  &__form {
+    width: 360px;
+  }
+
+  &__form-input {
+    display: block;
+    width: 100%;
+    padding: 13px 17px;
+    border: none;
+    outline: solid 1px $grey-reg-input;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    margin: 0 0 21px;
+
+    &::placeholder {
+      color: $grey-reg-input;
+    }
+  }
+
+  &__form-label {
+    display: block;
+    color: $black;
+    margin: 0 0 20px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+  }
+
+  &__form-radio-wrp {
+    margin: 11px 0 33px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__form-radio {
+    display: none;
+
+    &:checked+.registration__form-radio-label::before {
+      background-image: url("../img/radio.svg");
+      background-size: cover;
+    }
+  }
+
+  &__form-radio-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 20px 0 0;
+
+    &::before {
+      content: '';
+      width: 17px;
+      height: 17px;
+      margin: 0 10px 0 0;
+      display: block;
+      border: 1px solid $grey-reg-input;
+      border-radius: 50%;
+    }
+  }
+
+  &-form-desc {
+    color: $grey-reg-input;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  &__desc {
+    max-width: 652px;
+  }
+
+  &__button {
+    padding: 16px 29px;
+    margin: 55px 0 0 0;
+    border: 1px solid $red-text;
+    background-color: $red-text;
+    text-transform: uppercase;
+    color: $white;
+  }
+
+  &__button-img {
+    fill: $white;
+    margin-left: 20px;
+  }
+
+  &__sub-title {
+    margin: 0 0 22px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+  }
+
+  &__desc-text {
+    margin: 0 0 21px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &__desc-item {
+    margin: 0 0 16px;
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+
+    &::before {
+      content: '';
+      width: 20px;
+      height: 16px;
+      margin: 0 23px 0 0;
+      background-image: url("../img/check.svg");
+      background-size: cover;
+    }
+  }
+}
