@@ -1,0 +1,95 @@
+.product-sale {
+  position: relative;
+  min-height: 600px;
+  border: 1px solid $grey-cart-input;
+  margin: -65px auto 129px;
+  background-color: $white;
+  padding: 65px;
+  box-sizing: border-box;
+
+  &__title {
+    color: $pink-text;
+    text-transform: uppercase;
+    text-align: center;
+    @include font(14px, 17px, 300);
+  }
+
+  &__hr-title {
+    width: 63px;
+    margin: 12px auto;
+    background-color: $pink-line;
+    opacity: 1;
+
+    &:not([size]) {
+      height: 3px;
+    }
+  }
+
+  &__sub-title {
+    color: $grey-text;
+    text-transform: uppercase;
+    text-align: center;
+    @include font(18px, 21px, 300);
+  }
+
+  &__desc {
+    max-width: 555px;
+    color: $grey-text;
+    margin: 48px auto 0;
+    text-align: center;
+    @include font(14px, 17px, 300);
+  }
+
+  &__price {
+    color: $red-text;
+    margin: 32px 0 0 0;
+    text-align: center;
+    @include font(24px, 29px, 300);
+  }
+
+  &__hr {
+    max-width: 641px;
+    margin: 65px auto;
+    background-color: $grey-text;
+    opacity: 1;
+  };
+
+  &__menu-item {
+    margin: 0 12px;
+    border: none;
+    text-transform: uppercase;
+    color: $grey-text;
+    @include font(14px, 17px);
+
+    &:hover {
+      color: $pink-text;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__btn {
+    margin: 49px auto 0;
+    padding: 14px 57px 14px 24px;
+    border: 1px solid $pink-bdr;
+    color: $red-text;
+    background-color: transparent;
+    @include font(16px, 19px);
+
+    svg {
+      fill: $red-text;
+      margin-right: 23px;
+    }
+
+    &:hover {
+      background-color: $red-text;
+      color: $white;
+      
+      svg {
+        fill: $white;
+      }
+    }
+  }
+}
