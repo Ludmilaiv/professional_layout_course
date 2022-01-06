@@ -3,6 +3,10 @@ body {
   @include font(14px, 17px);
 }
 
+button, input {
+  font: inherit;
+}
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;

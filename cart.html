@@ -89,7 +89,7 @@
                     <li class="shopping-cart__sale-info-item">Size: Xl</li>
                     <li class="shopping-cart__sale-info-item">
                       <label for="quantity">Quantity:</label>
-                      <input class="shopping-cart__sale-info-input" type="text" value="2">
+                      <input class="shopping-cart__sale-info-input" type="text" id="quantity" value="2">
                     </li>
                   </ul>
                 </div>
@@ -118,15 +118,32 @@
             </div>
           </fieldset>
         </form>
-
-        <div class="shopping-cart__form-wrp">
+        <div class="shopping-cart__form-wrp shopping-cart__form-wrp-flex">
           <form class="shopping-cart__form-address" action="">
+            <fieldset>
+              <legend class="shopping-cart__form-address-title">shipping adress</legend>
+              <label for="city" class="visually-hidden">city</label>
+              <input type=text id="city" placeholder="City" value="Bangladesh">
+              <label for="state" class="visually-hidden">state</label>
+              <input type=text id="state" placeholder="State">
+              <label for="postcode" class="visually-hidden">postcode</label>
+              <input type=text id="postcode" placeholder="Postcode / Zip">
+              <button class="shopping-cart__form-address-btn" type="submit">get a quote</button>
+            </fieldset>
           </form>
-          <form class="shopping-cart__form-checkout" action="">
-          </form>
+          <div class="shopping-cart__checkout" action="">
+            <div class="shopping-cart__form-checkout-row">
+              <span class="shopping-cart__sub-total">sub total</span>
+              <span class="shopping-cart__sub-total-price">$900</span>
+            </div>
+            <div class="shopping-cart__form-checkout-row">
+              <span class="shopping-cart__total">sub total</span>
+              <span class="shopping-cart__total-price">$900</span>
+            </div>
+            <hr class="shopping-cart__checkout-hr">
+            <button class="shopping-cart__checkout-btn" type="button">proceed to checkout</button>
+          </div>
         </div>
-
-
       </div>
     </section>
   </main>
