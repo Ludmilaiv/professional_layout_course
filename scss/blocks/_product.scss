@@ -1,0 +1,86 @@
+.product {
+  
+  &__title-wrp {
+    display: flex;
+    align-items: center;
+    background-color: $pink-bkg-light;
+    min-height: 148px;
+  }
+
+  &__title {
+    @include font(24px, 29px);
+    text-transform: uppercase;
+    color: $red-text;
+  }
+
+  &__nav-item {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $grey-text;
+    @include font(14px, 17px, 300);
+
+    &_active {
+      color: $red-text;
+      @include font(14px, 17px, 700);
+    }
+  }
+
+  .carousel-control-prev {
+    opacity: 1;
+    justify-content: flex-start;
+
+    svg {
+      fill: $black-text;
+    }
+
+    &:hover {
+      svg {
+        fill: $red-hover;
+      }
+    }
+
+    &-icon {
+      width: 47px;
+      height: 47px;
+      background: $grey-button;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .carousel-control-next {
+    opacity: 1;
+    justify-content: flex-end;
+
+    svg {
+      fill: $black-text;
+    }
+
+    &:hover {
+      svg {
+        fill: $red-hover;
+      }
+    }
+
+    &-icon {
+      width: 47px;
+      height: 47px;
+      background: $grey-button;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .carousel-item {
+    overflow: hidden;
+    height: 777px;
+  }
+
+  &__slider-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
