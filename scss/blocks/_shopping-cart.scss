@@ -16,19 +16,51 @@
 
   &__wrp {
     display: flex;
+    justify-content: space-between;
     margin: 96px auto 128px;
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
   }
 
   &__form-sales {
-    width: 652px
+    width: 652px;
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &__form-wrp {
+    flex-grow: 1;
+
+    @include tablet {
+      width: 100%;
+    }
   }
 
   &__sales-item {
+    position: relative;
     display: flex;
     width: 100%;
     min-height: 306px;
     margin: 0 0 40px;
     box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+
+    &::after {
+      content: "\2716";
+      position: absolute;
+      right: 28px;
+      top: 28px;
+      @include font(24px, 26px);
+
+      @include mobile {
+        right: 20px;
+        top: 20px;
+        @include font(20px, 22px);
+      }
+    }
   }
 
   &__sales-item-img {
@@ -40,21 +72,33 @@
   &__sale-info {
     flex-grow: 1;
     padding: 22px 150px 22px 31px;
+
+    @include mobile {
+     padding: 22px;
+    }
   }
 
   &__sale-title {
     text-transform: uppercase;
-    @include font(24px, 29px);
     margin-bottom: 42px;
     color: $black;
+    @include font(24px, 29px);
+
+    @include mobile {
+      @include font(16px, 19px);
+    }
   }
 
   &__sale-info-item {
     display: flex;
     align-items: center;
-    @include font(22px, 26px);
     color: $light-black-text;
     margin: 0 0 6px;
+    @include font(22px, 26px);
+
+    @include mobile {
+      @include font(14px, 16px);
+    }
   }
 
   &__sale-price {
@@ -73,6 +117,10 @@
     margin: 32px 0 0 0;
     display: flex;
     justify-content: space-between;
+
+    @include tablet {
+      justify-content: space-around;
+    }
   }
 
   &__button {
@@ -80,7 +128,170 @@
     border: solid 2px $grey-reg-input;
     padding: 17px 40px;
     text-transform: uppercase;
-    @include font(14px, 17px, 300);
     color: $black-text;
+    @include font(14px, 17px, 300);
+
+    @include mobile {
+      @include font(12px, 14px);
+    }
+
+    &:focus {
+      outline: none;
+      border: 2px solid $black;
+    }
+
+    &:hover {
+      border: 2px solid $red-hover;
+      color: $red-hover;
+    }
+  }
+
+  &__form-address-title {
+    color: $grey-input-text;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    @include font(16px, 19px, 300);
+  }
+
+  &__form-address {
+    min-width: 360px;
+    margin: 0 0 58px 128px;
+
+    @include tablet {
+      margin-left: 0;
+      min-width: 45%;
+    }
+
+    @include mobile {
+      margin-left: 0;
+      min-width: 100%;
+    }
+
+    input {
+      color: $grey-input-text;
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      padding: 13px 15px;
+      border: 1px solid $grey-reg-input;
+      @include font(13px, 16px, 300);
+
+      &::placeholder {
+        color: $grey-placeholder;
+      }
+
+      &:focus {
+        outline: none;
+        border: 1px solid $black;
+      }
+
+      &:hover {
+        border: 1px solid $red-hover;
+      }
+    }
+  }
+
+  &__form-address-btn {
+    background-color: transparent;
+    border: solid 1px $grey-reg-input;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    color: $grey-reg-input;
+    @include font(11px, 13px, 300);
+
+    &:focus {
+      outline: none;
+      border: 1px solid $black;
+    }
+
+    &:hover {
+      border: 1px solid $red-hover;
+      color: $red-hover;
+    }
+  }
+
+  &__checkout {
+    min-width: 360px;
+    margin: 0 0 58px 128px;
+    box-sizing: border-box;
+    padding: 40px;
+    background-color: $light-gray-bkg;
+
+    @include tablet {
+      margin: 36px 0 0 16px;
+      min-width: 45%;
+    }
+
+    @include mobile {
+      min-width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  &__form-checkout-row {
+    display: flex;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    color: $black;
+  }
+
+  &__sub-total {
+    margin-bottom: 12px;
+    @include font(11px, 13px);
+  }
+
+  &__sub-total-price {
+    margin-left: 15px;
+    @include font(11px, 13px);
+  }
+
+  &__total {
+    @include font(16px, 19px, 300);
+  }
+
+  &__total-price {
+    margin-left: 15px;
+    color: $red-text;
+    @include font(16px, 19px, 700);
+  }
+
+  &__checkout-hr {
+    margin: 21px 0 17px;
+  }
+
+  &__checkout-btn {
+    background-color: $red-text;
+    border: solid 1px $red-text;
+    padding: 15px 42px;
+    display: block;
+    margin: auto;
+    text-transform: uppercase;
+    color: $white;
+    @include font(16px, 19px, 300);
+
+    &:focus {
+      outline: none;
+      border: 2px solid $black;
+    }
+
+    &:hover {
+      border: 2px solid $red-hover;
+      color: $red-hover;
+      background-color: transparent;
+    }
+  }
+
+  &__form-wrp-flex {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 65px;
+    }
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
   }
 }

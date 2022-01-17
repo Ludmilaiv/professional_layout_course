@@ -93,24 +93,25 @@
     color: $grey-input-text;
     border: 1px $grey-input solid;
     border-radius: 20px 0 0 20px;
+    transition: color 0.5s;
 
     @include mobile {
       width: 50%;
       padding: 10px 21px;
     }
-  }
 
-  &__form-input::placeholder {
-    color: $grey-placeholder;
-  }
+    &::placeholder {
+      color: $grey-placeholder;
+    }
 
-  &__form-input:focus {
-    outline: none;
-    border: 1px $grey-placeholder solid;
-  }
+    &:focus {
+      outline: none;
+      border: 1px $grey-placeholder solid;
+    }
 
-  &__form-input:hover {
-    border: 1px $red-text solid;
+    &:hover {
+      border: 1px $red-text solid;
+    }
   }
 
   &__form-submit {
