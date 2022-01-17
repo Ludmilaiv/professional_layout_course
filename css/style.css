@@ -46,6 +46,25 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+
+:root {
+  --black: #222222;
+  --pink-bkg: #F1E4E6;
+  --pinc-bkg-light: #F8F3F4;
+  --light-pink-bkg: #F8F8F8;
+  --black-text: #000000;
+  --pink-text: #F1808F;
+  --white: #FFFFFF;
+  --light-grey-text: #FBFBFB;
+  --grey-text: #9F9F9F;
+  --red-text: #F16D7F;
+  --red-hover: #E05C6E;
+  --pink-bdr: #FF6A6A;
+  --grey-filter: rgba(58, 56, 56, 0.86);
+  --grey-input: #E1E1E1;
+  --grey-input-text: #222224;
+  --grey-placeholder: #222224a1;
+  --grey-reg-input: #A4A4A4;
 }
 
 body {
@@ -646,14 +665,25 @@ button, input {
 .sales__item-text {
   font-size: 16px;
   line-height: 19px;
+
+.offer__item-title {
+  color: var(--light-grey-text);
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0 0 16px;
   text-align: center;
   color: #FFFFFF;
 }
-
+  
 .sales__item-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
+
+.offer__item-desc {
+  color: var(--light-grey-text);
+  font-weight: 300;
+  font-size: 13.972px;
   text-align: center;
   color: #F1808F;
 }
@@ -904,7 +934,7 @@ button, input {
 .copyright__desc {
   font-size: 16px;
   line-height: 19px;
-  color: #FBFBFB;
+  color: var(--light-grey-text);
 }
 
 @media (max-width: 767px) {
