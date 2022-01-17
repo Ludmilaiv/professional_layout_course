@@ -1916,7 +1916,6 @@ button, input {
   grid-gap: 20px;
   padding-top: 51px;
   padding-bottom: 64px;
-  cursor: pointer;
 }
 
 .catalog__filter-btn {
@@ -1939,6 +1938,7 @@ button, input {
   font-weight: 600;
   font-style: normal;
   color: #000000;
+  cursor: pointer;
 }
 
 .catalog__filter-btn:hover {
